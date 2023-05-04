@@ -28,3 +28,20 @@ const scrollHeader = () => {
                        : header.classList.remove('bg-header')
 }
 window.addEventListener('scroll', scrollHeader)
+
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+                        : scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+})
+
+sr.reveal('.home-img')
+sr.reveal('.home-data', {origin: 'bottom'})
